@@ -22,6 +22,7 @@ executable highdiff
   build-depends:       base
                      , text
                      , diff-parse
+                     , lens
                      , hpygments
   -- hs-source-dirs:
   default-language:    Haskell2010

@@ -4,14 +4,14 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, diff-parse, stdenv }:
+  f = { mkDerivation, base, diff-parse, lens, stdenv, text }:
       mkDerivation {
         pname = "highdiff";
         version = "0.1.0.0";
         src = ./.;
         isLibrary = false;
         isExecutable = true;
-        executableHaskellDepends = [ base diff-parse ];
+        executableHaskellDepends = [ base diff-parse lens text ];
         license = stdenv.lib.licenses.bsd3;
       };
 
